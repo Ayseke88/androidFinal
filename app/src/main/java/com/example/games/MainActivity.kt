@@ -1,5 +1,7 @@
 package com.example.games
 
+import com.example.games.Fragment.GameListFragment
+import com.example.games.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.os.bundleOf
@@ -10,6 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.games.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+
 
 
 class   MainActivity : AppCompatActivity() {
@@ -34,11 +37,11 @@ private lateinit var navController: NavController
         setupActionBarWithNavController(navController,appBarConfiguration)
         bottomNavigationView.setupWithNavController(navController)
         bottomNavigationView.setOnItemSelectedListener {
-if(it.itemId==R.id.gameListFragment){
-navController.navigate(it.itemId, bundleOf(GameListFragment.ARG_MODE to 0))
-}
-else{
-    navController.navigate(it.itemId)
+        if(it.itemId==R.id.gameListFragment){
+        navController.navigate(it.itemId, bundleOf(GameListFragment.ARG_MODE to 0))
+        }
+        else{
+            navController.navigate(it.itemId)
 }
             true
         }
