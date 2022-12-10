@@ -1,10 +1,10 @@
-package room
+package com.example.games.data.source.local.room
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import model.GameEntity
+import com.example.games.data.model.GameEntity
 
 @Dao
 interface GameDao {
@@ -13,7 +13,7 @@ fun getAllFavGames(): List<GameEntity>
 @Query("SELECT * FROM favourite_games WHERE id=:id")
 fun getGameById(id:Int): GameEntity?
 @Insert
-fun insertGame(game:GameEntity)
+fun insertGame(game: GameEntity)
 @Delete
-fun deleteGame(game:GameEntity)
+fun deleteGame(game: GameEntity)
 }

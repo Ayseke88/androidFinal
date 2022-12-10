@@ -1,4 +1,4 @@
-package Api
+package com.example.games.data.source.remote.Api
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

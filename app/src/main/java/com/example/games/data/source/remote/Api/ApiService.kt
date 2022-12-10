@@ -1,8 +1,8 @@
-package Api
+package com.example.games.data.source.remote.Api
 
 import android.telecom.Call
 import androidx.room.Query
-import model.Game
+import com.example.games.data.model.Game
 import retrofit2.http.GET
 
 interface ApiService {

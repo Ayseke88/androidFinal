@@ -1,8 +1,9 @@
-package room
+package com.example.games.data.source.local
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import model.GameEntity
+import com.example.games.data.model.GameEntity
+import com.example.games.data.source.local.room.GameDao
 
 class GameLocalRepository(private val gameDao: GameDao) {
     companion object {

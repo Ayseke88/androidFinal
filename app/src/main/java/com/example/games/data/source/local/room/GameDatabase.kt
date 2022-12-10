@@ -1,10 +1,10 @@
-package room
+package com.example.games.data.source.local.room
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import model.GameEntity
+import com.example.games.data.model.GameEntity
 
 @Database(
     entities = [GameEntity::class],
