@@ -7,10 +7,7 @@ import retrofit2.http.GET
 
 interface ApiService {
     @GET("games/")
-    fun getAllGames(): Call<List<Game>>
+    fun getAllGames(): retrofit2.Call<List<Game>>
 
-    @GET("games/")
-    fun getGamesByCategory(
-        @Query("category") category: String
-    ): Call<List<Game>>
+
 }

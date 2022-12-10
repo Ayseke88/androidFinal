@@ -35,20 +35,5 @@ class GameRemoteRepository {
         return result
     }
 
-    fun getGamesByCategoryName(category: String): LiveData<List<Game>> {
-        val result = MutableLiveData<List<Game>>()
 
-        val call = ApiClient.getApiService()?.getGamesByCategory(category)
-        call?.enqueue(object : Callback<List<Game>> {
-            override fun onResponse(call: Call<List<Game>>, response: Response<List<Game>>) {
-                result.value = if (response.isSuccessful) response.body() else emptyList()
-            }
-            override fun onFailure(call: Call<List<Game>>, t: Throwable) {
-                result.value = emptyList()
-                Log.i("Error", t.message.toString())
-            }
-        })
-
-        return result
-    }
 }
