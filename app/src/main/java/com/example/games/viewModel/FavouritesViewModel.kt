@@ -1,4 +1,4 @@
-package viewModel
+package com.example.games.viewModel
 
 import androidx.lifecycle.ViewModel
 import com.example.games.data.model.GameEntity

@@ -1,4 +1,4 @@
-package view.Adapter
+package com.example.games.view.Adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import com.example.games.R
 import com.example.games.data.model.GameEntity
 import com.example.games.databinding.ItemGameCardBinding
-import viewModel.FavouritesViewModel
+import com.example.games.viewModel.FavouritesViewModel
 
 class FavouriteGamesAdapter(
     private val viewModel: FavouritesViewModel,

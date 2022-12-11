@@ -6,18 +6,15 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com."
+        android:name="com.example.games.view.Fragment.HomeFragment"
         android:label="Home" >
-        <action
-            android:id="@+id/action_homeFragment_to_categoryListFragment"
-            app:destination="@id/categoryListFragment" />
         <action
             android:id="@+id/action_homeFragment_to_gameListFragment"
             app:destination="@id/gameListFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameListFragment"
-        android:name="com.example."
+        android:name="com.example.games.view.Fragment.GameListFragment"
         android:label="Games" >
         <argument
             android:name="mode"
@@ -25,16 +22,7 @@
             android:defaultValue="0" />
     </fragment>
     <fragment
-        android:id="@+id/categoryListFragment"
-        android:name="com."
-        android:label="Categories"
-        tools:layout="@layout/fragment_category_list" >
-        <action
-            android:id="@+id/action_categoryListFragment_to_gameListFragment"
-            app:destination="@id/gameListFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/favouritesFragment"
-        android:name="com."
+        android:name="com.example.games.view.Fragment.FavouritesFragment"
         android:label="Favourites" />
 </navigation>

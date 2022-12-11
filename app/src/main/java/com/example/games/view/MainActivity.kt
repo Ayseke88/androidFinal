@@ -1,6 +1,6 @@
-package com.example.games
+package com.example.games.view
 
-import com.example.games.Fragment.GameListFragment
+import com.example.games.view.Fragment.GameListFragment
 import com.example.games.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,14 +16,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class   MainActivity : AppCompatActivity() {
+
 private lateinit var binding: ActivityMainBinding
 private lateinit var navController: NavController
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -32,7 +30,7 @@ private lateinit var navController: NavController
         navController=NavHostFragment.navController
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val appBarConfiguration = AppBarConfiguration(
-          setOf(R.id.homeFragment, R.id.gameListFragment, R.id.categoryListFragment, R.id.favouritesFragment)
+          setOf(R.id.homeFragment, R.id.gameListFragment, R.id.favouritesFragment)
         )
         setupActionBarWithNavController(navController,appBarConfiguration)
         bottomNavigationView.setupWithNavController(navController)

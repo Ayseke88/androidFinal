@@ -1,4 +1,4 @@
-package com.example.games.Fragment
+package com.example.games.view.Fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,8 +10,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.games.R
 import com.example.games.databinding.FragmentHomeBinding
 
-class HomeFragment: Fragment(R.layout.fragment_home) {
-private lateinit var binding: FragmentHomeBinding
+class HomeFragment : Fragment(R.layout.fragment_home) {
+    private lateinit var binding: FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -19,17 +19,16 @@ private lateinit var binding: FragmentHomeBinding
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
-    override fun onViewCreated(view:View,savedInstanceState: Bundle?){
-    super.onViewCreated(view, savedInstanceState)
-binding.apply{
-btnCategories.setOnClickListener{
-findNavController().navigate(R.id.action_homeFragment_to_categoryListFragment)
-}
-btnGames.setOnClickListener{
-findNavController().navigate(
-R.id.action_homeFragment_to_gameListFragment, bundleOf(GameListFragment.ARG_MODE to 0)
-)
-}
-}
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.apply {
+            btnGames.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_homeFragment_to_gameListFragment,
+                    bundleOf(GameListFragment.ARG_MODE to 0)
+                )
+            }
+        }
     }
 }

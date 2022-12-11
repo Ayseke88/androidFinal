@@ -23,7 +23,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/guideline3"
     android:orientation="horizontal"
-    app:layout_constraintGuide_percent="0.3"/>
+    app:layout_constraintGuide_percent="0.43"/>
 
     <Button
         android:id="@+id/btnGames"
@@ -40,20 +40,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
 
-    <Button
-        android:id="@+id/btnCategories"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="35dp"
-        android:backgroundTint="@color/teal_700"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="@string/to_categories"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGames" />
   
 
 </androidx.constraintlayout.widget.ConstraintLayout>

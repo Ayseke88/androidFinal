@@ -8,10 +8,7 @@
         android:id="@+id/gameListFragment"
         android:icon="@drawable/ic_baseline_videogame_asset_24"
         android:title="@string/games_list"/>
-    <item
-        android:id="@+id/categoryListFragment"
-        android:icon="@drawable/ic_baseline_category_24"
-        android:title="@string/categories"/>
+
     <item
         android:id="@+id/favouritesFragment"
         android:icon="@drawable/ic_baseline_favorite_24"
